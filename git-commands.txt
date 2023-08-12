@@ -1,0 +1,42 @@
+
+########################### GIT STASH ##########################
+CREATE
+------
+git stash - will stash all changes BUT with random name(very bad)
+git stash -m "added a line" - will stash all changes with label "added a line"
+
+LIST
+------
+git stash list - list out all stashed 
+
+APPLY
+----
+git stash apply  - is going to display/apply only very latest/last stash
+git stash apply <number> - just mention the stash number to apply it
+
+DELETE
+-----
+git stash pop - will delete very latest/last stash
+git stash drop <number> - will delete stash of entered number
+git stash clear - will delete all stash at same time
+
+CREATE BRANCH WITH STASH
+-------
+git stash branch "my-new-branch" <number> - will create new branch and add all stashed files in it, also move to this branch
+
+
+########################### GIT RESET ##########################
+:wq - write and quite
+:q - quite without saving
+git log --pretty=oneline
+
+Git revert - always add a commit and can be access any time so it is safe
+Git reset - actually use this to revert local commit as we don't want to add any additional commit
+
+git reset HEAD^ - revert last local commit(before push)
+git reset --soft <Id of -1 previous commit> - same as above
+git reset HEAD test1.html - revert las commited (particular file) before push
+
+git reset <previous commit id> - will rest commit to preview commit after push(locally)
++
+git push origin <branch> -f - will remove the commit from server as well(forcefully)
